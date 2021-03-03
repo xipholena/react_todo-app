@@ -1,7 +1,8 @@
 import React from 'react';
 import {TodoItem} from '../TodoItem'
 
-export const TodoList = ({items, getCheckedTodoId}) => {
+export const TodoList = ({items, getCheckedTodoId, destroyHandler}) => {
+  console.log('TodoList');
   return(
     <>
     <ul className="todo-list">
@@ -48,7 +49,8 @@ export const TodoList = ({items, getCheckedTodoId}) => {
           todo={item.todo}
           completed={item.completed}
           id={item.id}
-          getCheckedTodoId={getCheckedTodoId}/>
+          getCheckedTodoId={getCheckedTodoId}
+          destroyHandler={destroyHandler}/>
     ))}
     </ul>
     </>
