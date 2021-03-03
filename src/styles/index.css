@@ -141,9 +141,11 @@ body {
   padding: 10px 27px;
 }
 
-.toggle-all:checked + label:before {
+/*.toggle-all:checked + label:before,*/
+.toggle-all.active + label:before {
   color: #737373;
 }
+
 
 .footer {
   color: #777;
@@ -183,8 +185,11 @@ body {
   line-height: 20px;
   text-decoration: none;
   cursor: pointer;
+  visibility: hidden;
 }
-
+.clear-completed.visible {
+  visibility: visible;
+}
 .clear-completed:hover {
   text-decoration: underline;
 }
