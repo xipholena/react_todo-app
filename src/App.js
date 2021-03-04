@@ -1,12 +1,12 @@
 import React from 'react';
-import {TodoApp} from './components/TodoApp'
-import {TodosFilter} from './components/TodosFilter'
+import { TodoApp } from './components/TodoApp';
+import { TodosFilter } from './components/TodosFilter';
 
 function App() {
   return (
     <>
-      <TodoApp/>
-      <TodosFilter/>
+      <TodoApp />
+      <TodosFilter />
     </>
   );
 }
