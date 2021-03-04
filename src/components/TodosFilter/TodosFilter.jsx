@@ -5,8 +5,9 @@ export const TodosFilter = () => {
     all: 'all',
     active: 'active',
     completed: 'completed',
-  }
+  };
+
   return (
     <></>
-  )
-}
+  );
+};

@@ -1,11 +1,12 @@
 import React from 'react';
-import {TodoItem} from '../TodoItem'
+import { TodoItem } from '../TodoItem';
 
-export const TodoList = ({items, getCheckedTodoId, destroyHandler}) => {
-  console.log('TodoList');
-  return(
+export const TodoList = ({ items, getCheckedTodoId, destroyHandler }) => {
+  //console.log('TodoList');
+
+  return (
     <>
-    <ul className="todo-list">
+      <ul className="todo-list">
         <li>
           <div className="view">
             <input type="checkbox" className="toggle" />
@@ -43,16 +44,18 @@ export const TodoList = ({items, getCheckedTodoId, destroyHandler}) => {
         </li>
       </ul>
 
-    <ul className="todo-list">{items.map(item => (
-        <TodoItem 
-          key={item.id}
-          todo={item.todo}
-          completed={item.completed}
-          id={item.id}
-          getCheckedTodoId={getCheckedTodoId}
-          destroyHandler={destroyHandler}/>
-    ))}
-    </ul>
+      <ul className="todo-list">
+        {items.map(item => (
+          <TodoItem
+            key={item.id}
+            todo={item.todo}
+            completed={item.completed}
+            id={item.id}
+            getCheckedTodoId={getCheckedTodoId}
+            destroyHandler={destroyHandler}
+          />
+        ))}
+      </ul>
     </>
-  )
-}
+  );
+};
